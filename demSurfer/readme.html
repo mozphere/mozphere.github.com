@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>demSurfer by mozphere</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>Readme</h1>
+        </div>
+				<h3>Basic Instructions</h3>
+				<i>If you are familiar with cmd and batch files, you just need to know the following:</i>
+				<ol>
+				<li> When you select only one replay, you will get a menu.
+				<li>When you select more than one, the info of all those matches will be written to results.txt
+				<li>You should run demSurfer by double-clicking the Start shortcut.
+				<li>You might need to get the latest <a href="http://www.java.com/en/download/">JRE</a>.
+				</ol>
+
+				<h3>Detailed Info and Insructions</h3>
+				<ol>
+				<li>Extract or move the contents of demSurfer.zip file anywhere you like.</li>
+				Then you will have to either copy/move all three files (Start, cmd.bat, demSurfer.jar) to any directory that contains DotA 2 replays or provide the full path of a replay or a directory that contains replays.
+				<li>Right click cmd.bat and then click edit.</li>
+				
+				- You can select one or more replays from the current directory separated by a space
+				<pre><code>java -jar demSurfer.jar example.dem example2.dem</code></pre>
+				- or select all replays from the current directory
+				<pre><code>java -jar demSurfer.jar *.dem</code></pre>
+
+				- You can also provide full paths to select replays in different directories
+				<pre><code>java -jar demSurfer.jar "C:\Games\DotA 2 Replays\example.dem"</code></pre>
+				- or select all replays in a different directory
+				<pre><code>java -jar demSurfer.jar "C:\Games\DotA 2 Replays\*.dem"</code></pre>
+				<li>Now you can double-click Start. You will find match info and scoreboards for all the replays in either example.txt or results.txt
+				</ol>
+
+
+				<h3>Files</h3>
+
+				
+				<li>Start.lnk is just a shortcut to the Windows Command Prompt that also changes the console's font to one that does support Unicode characters.
+				<p>
+				<li>cmd.bat is a batch file that executes the commands written in it.
+				<ul>
+				<li>chcp 65001 changes the Code Page so that Unicode (UTF-8) characters are supported.
+				<li>cls just clears the screen.
+				<li>java -jar demSurfer.jar *.dem runs the program, selecting all files in the current directory.</ul>
+				<li>demSurfer.jar is an archive file that contains all the necessary files to run the program.
+
+				</section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
